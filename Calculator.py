@@ -19,7 +19,7 @@ class Form(QDialog):
 
         self.lineEdit.setFocus()
 
-        #self.connect(self.lineEdit, SIGNAL("returnPressed()"), self.updateUi)
+        #OLD WAY self.connect(self.lineEdit, SIGNAL("returnPressed()"), self.updateUi)
         self.lineEdit.returnPressed.connect(self.updateUi)
 
         self.setWindowTitle("Calculate")
