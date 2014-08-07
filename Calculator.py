@@ -28,8 +28,10 @@ class Form(QDialog):
         try:
             text = self.lineEdit.text()
             self.browser.append("%s = <b>%s</b>" % (text, eval(text)))
+            self.lineEdit.selectAll()
         except:
             self.browser.append("<font color=red>%s is invalid</font>" % text)
+            self.lineEdit.selectAll()
 
 app = QApplication(sys.argv)
 form = Form()
