@@ -1,6 +1,5 @@
 import sys
 from math import *
-from PySide.QtCore import *
 from PySide.QtGui import *
 
 class Form(QDialog):
