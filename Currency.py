@@ -1,7 +1,5 @@
 import sys
 import urllib2
-from functools import partial
-from PySide.QtCore import *
 from PySide.QtGui import *
 
 class Form(QDialog):
