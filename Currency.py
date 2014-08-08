@@ -36,10 +36,10 @@ class Form(QDialog):
         self.fromSpinBox.valueChanged.connect(self.updateUi)
 
     def updateUi(self):
-        to = self.toComboBox.currentText()
-        from_ = self.fromComboBox.currentText()
+        fromCurrency = self.fromComboBox.currentText()
+        toCurrency = self.toComboBox.currentText()
 
-        amount = (self.rates[from_] / self.rates[to]) * self.fromSpinBox.value()
+        amount = (self.rates[fromCurrency] / self.rates[toCurrency]) * self.fromSpinBox.value()
         self.toLabel.setText("%0.2f" % amount)
 
     def getDate(self):
